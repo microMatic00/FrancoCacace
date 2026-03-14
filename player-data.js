@@ -6,12 +6,12 @@ const PLAYER = {
   name: "Juan Franco Cacace",
   nickname: "Franco",
   age: 25,
-  birthdate: "2001-03-15",       // ajustar fecha real
-  height: "1.80 m",
-  weight: "76 kg",
+  birthdate: "2001-04-30", // ajustar fecha real
+  height: "1.84 m",
+  weight: "78 kg",
   nationality: "Argentina",
   flag: "🇦🇷",
-  passport: "ARG",               // "UE" si tiene pasaporte europeo
+  passport: "ARG", // "UE" si tiene pasaporte europeo
   hasEUPassport: false,
 
   // --- PERFIL TÉCNICO ---
@@ -24,7 +24,7 @@ const PLAYER = {
     tertiaryFull: "Defensor Central",
   },
   foot: "Derecho",
-  club: "Águila FC",
+  club: "Águila CD",
   league: "Liga Mayor de Futbol de El Salvador",
   contractEnd: "Dic 2025",
 
@@ -41,10 +41,17 @@ const PLAYER = {
         youtubeId: "p_19BPx9Mbc",
         url: "https://www.youtube.com/watch?v=p_19BPx9Mbc",
       },
+      {
+        label: "Video 3",
+        youtubeId: "AGxGqy19Bsw",
+        url: "https://www.youtube.com/watch?v=AGxGqy19Bsw",
+      },
     ],
-    transfermarkt: "https://www.transfermarkt.com.ar/franco-cacace/profil/spieler/1015243",
+    transfermarkt:
+      "https://www.transfermarkt.com.ar/franco-cacace/profil/spieler/1015243",
     whatsapp: "5492215715299",
-    whatsappMessage: "Hola Franco! Vi tu perfil de scouting y me interesa hablar sobre una oportunidad. ¿Tenés disponibilidad?",
+    whatsappMessage:
+      "Hola Franco! Vi tu perfil de scouting y me interesa hablar sobre una oportunidad. ¿Tenés disponibilidad?",
   },
 
   // --- ESTADÍSTICAS (temporada actual) ---
