@@ -8,7 +8,7 @@ const PLAYER = {
   age: 25,
   birthdate: "2001-04-30", // ajustar fecha real
   height: "1.84 m",
-  weight: "78 kg",
+  weight: "82 kg",
   nationality: "Argentina",
   flag: "🇦🇷",
   passport: "ARG", // "UE" si tiene pasaporte europeo
@@ -50,8 +50,7 @@ const PLAYER = {
     transfermarkt:
       "https://www.transfermarkt.com.ar/franco-cacace/profil/spieler/1015243",
     whatsapp: "5492215715299",
-    whatsappMessage:
-      "Hola Franco! Vi tu perfil de scouting y me interesa hablar sobre una oportunidad. ¿Tenés disponibilidad?",
+    whatsappMessage: "Hola Franco! Vi tu perfil y me interesa ",
   },
 
   // --- ESTADÍSTICAS (temporada actual) ---
