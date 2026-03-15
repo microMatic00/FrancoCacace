@@ -170,6 +170,99 @@
         background: linear-gradient(135deg, #003399, #ffcc00);
       }
 
+      /* Position map field */
+      .pitch-board {
+        position: relative;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+        aspect-ratio: 3 / 4;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 2px solid rgba(230, 230, 230, 0.45);
+        background:
+          linear-gradient(180deg, #23704b 0%, #18573a 100%),
+          repeating-linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.04) 0px,
+            rgba(255, 255, 255, 0.04) 44px,
+            rgba(255, 255, 255, 0.08) 44px,
+            rgba(255, 255, 255, 0.08) 88px
+          );
+      }
+
+      .pitch-mark {
+        position: absolute;
+        border: 2px solid rgba(255, 255, 255, 0.65);
+      }
+
+      .pitch-mark.midline {
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-width: 1.5px 0 0;
+      }
+
+      .pitch-mark.center-circle {
+        width: 24%;
+        aspect-ratio: 1;
+        border-radius: 999px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .pitch-mark.box {
+        width: 54%;
+        height: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top: none;
+      }
+
+      .pitch-mark.box.top {
+        top: 0;
+      }
+
+      .pitch-mark.box.bottom {
+        bottom: 0;
+        border-top: 2px solid rgba(255, 255, 255, 0.65);
+        border-bottom: none;
+      }
+
+      .position-marker {
+        position: absolute;
+        left: var(--x);
+        top: var(--y);
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .position-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 999px;
+        background: #f5b700;
+        box-shadow: 0 0 0 4px rgba(245, 183, 0, 0.2);
+      }
+
+      .position-label {
+        min-width: 42px;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        color: #0d0d0d;
+        border-radius: 999px;
+        padding: 4px 8px;
+        background: linear-gradient(135deg, #f5b700, #e09b00);
+        border: 1px solid rgba(13, 13, 13, 0.45);
+      }
+
       /* Scrollbar minimal */
       ::-webkit-scrollbar {
         width: 4px;
@@ -268,19 +361,19 @@
 
           <!-- Age · Height · Weight -->
           <p class="mt-1 text-sm text-brand-sub font-medium tracking-wide">
-            25 años &nbsp;·&nbsp; 1.85 m &nbsp;·&nbsp; 78 kg &nbsp;·&nbsp; 🇦🇷
-            Argentina
+            30/04/2001 &nbsp;·&nbsp; 1.84 m &nbsp;·&nbsp; 82 kg &nbsp;·&nbsp;
+            Argentina 🇦🇷
           </p>
 
           <!-- Position Badges -->
           <div class="flex gap-2 mt-3 flex-wrap justify-center">
             <span
-              class="badge-primary px-3 py-1 rounded-full text-xs font-black tracking-widest uppercase"
-              >LD</span
+              class="badge-secondary px-3 py-1 rounded-full text-xs font-black tracking-widest uppercase"
+              >DFC</span
             >
             <span
               class="badge-secondary px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase"
-              >DFC</span
+              >LD</span
             >
             <span
               class="badge-secondary px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase"
@@ -374,8 +467,58 @@
         </div>
       </section>
 
+      <!-- ── MAPA DE POSICIONES ── -->
+      <!-- <section class="px-4 mt-6 reveal" style="transition-delay: 0.12s">
+        <h2
+          class="text-xs font-bold uppercase tracking-widest text-brand-sub mb-3 gold-bar"
+        >
+          🗺️ Mapa de Posiciones
+        </h2>
+
+        <div
+          class="rounded-2xl border border-brand-line p-3"
+          style="
+            background: linear-gradient(
+              180deg,
+              rgba(255, 255, 255, 0.01),
+              rgba(0, 0, 0, 0.15)
+            );
+          "
+        >
+          <div
+            class="pitch-board"
+            role="img"
+            aria-label="Cancha con posiciones defensivas DFC, LD y LI"
+          >
+            <div class="pitch-mark midline"></div>
+            <div class="pitch-mark center-circle"></div>
+            <div class="pitch-mark box top"></div>
+            <div class="pitch-mark box bottom"></div>
+
+            <div class="position-marker" style="--x: 50%; --y: 74%">
+              <span class="position-dot"></span>
+              <span class="position-label">DFC</span>
+            </div>
+
+            <div class="position-marker" style="--x: 76%; --y: 80%">
+              <span class="position-dot"></span>
+              <span class="position-label">LD</span>
+            </div>
+
+            <div class="position-marker" style="--x: 24%; --y: 80%">
+              <span class="position-dot"></span>
+              <span class="position-label">LI</span>
+            </div>
+          </div>
+
+          <p class="text-[11px] text-brand-sub text-center mt-3 tracking-wide">
+            Referencia visual de ubicación base en línea defensiva.
+          </p>
+        </div>
+      </section> -->
+
       <!-- ── DATOS PERSONALES (ficha) ── -->
-      <section class="px-4 mt-6 reveal" style="transition-delay: 0.1s">
+      <!-- <section class="px-4 mt-6 reveal" style="transition-delay: 0.1s">
         <h2
           class="text-xs font-bold uppercase tracking-widest text-brand-sub mb-3 gold-bar"
         >
@@ -383,9 +526,9 @@
         </h2>
 
         <div class="rounded-2xl border border-brand-line overflow-hidden">
-          <div class="grid grid-cols-2 divide-x divide-brand-line">
-            <!-- Left column -->
-            <div class="divide-y divide-brand-line">
+          <div class="grid grid-cols-2 divide-x divide-brand-line"> -->
+      <!-- Left column -->
+      <!-- <div class="divide-y divide-brand-line">
               <div class="px-4 py-3">
                 <p class="text-xs text-brand-sub mb-0.5">Posición</p>
                 <p class="font-semibold text-white text-sm">Defensa</p>
@@ -398,9 +541,9 @@
                 <p class="text-xs text-brand-sub mb-0.5">Estatura</p>
                 <p class="font-semibold text-white text-sm">1.85 m</p>
               </div>
-            </div>
-            <!-- Right column -->
-            <div class="divide-y divide-brand-line">
+            </div> -->
+      <!-- Right column -->
+      <!-- <div class="divide-y divide-brand-line">
               <div class="px-4 py-3">
                 <p class="text-xs text-brand-sub mb-0.5">Edad</p>
                 <p class="font-semibold text-white text-sm">25 años</p>
@@ -416,7 +559,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- ── HIGHLIGHTS VIDEO ── -->
       <section class="px-4 mt-8 reveal">
@@ -431,7 +574,7 @@
             <p
               class="text-xs font-bold uppercase tracking-widest text-brand-sub mb-2"
             >
-              Villa San Carlos
+              Villa San Carlos - temporada 2024/25
             </p>
             <div class="video-wrapper">
               <iframe
@@ -455,7 +598,7 @@
             <p
               class="text-xs font-bold uppercase tracking-widest text-brand-sub mb-2"
             >
-              Estudiantes de La Plata
+              Estudiantes de La Plata - temporada 2022/23
             </p>
             <div class="video-wrapper">
               <iframe
