@@ -50,7 +50,7 @@ const PLAYER = {
     transfermarkt:
       "https://www.transfermarkt.com.ar/franco-cacace/profil/spieler/1015243",
     whatsapp: "5492215715299",
-    whatsappMessage: "Hola Franco! Vi tu perfil y me interesa ",
+    whatsappMessage: "",
   },
 
   // --- ESTADÍSTICAS (temporada actual) ---
